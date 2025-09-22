@@ -1,0 +1,244 @@
+###BEGIN -PÁGINA DE TÍTULO-###
+Licensing Guidelines
+
+Product Development Do's and Don'ts
+
+2.0
+
+Coke Global Licensing
+The Coca-Cola Company
+###END -PÁGINA DE TÍTULO-###
+
+###BEGIN -PRINCÍPIOS DE DESIGN-###
+Bold Simplicity
+Um retorno à clareza; remoção de todo ruído e estática estranhos ao redor da Marca para encontrar a essência ousada e simples da Coca-Cola.
+
+Real Authenticity
+Aproveitamos tudo o que é real, original e honesto sobre a marca. Ligar-se claramente à nossa herança nos dá a licença para tentar coisas novas e continuar evoluindo.
+
+The Power of Red
+Em cada ponto de contato, vamos alavancar o poder do Vermelho Coke e garantir sua consistência em todo o mundo. Nós integraremos o fio vermelho em tudo o que fazemos.
+
+Familiar, Yet Surprising
+Nós não seguimos as normas da categoria; em vez disso, nós as lideramos. Nós introduzimos novos elementos estratégicos para criar variedade e frescor em toda a experiência da Marca.
+###END -PRINCÍPIOS DE DESIGN-###
+
+###BEGIN -PROPÓSITO-###
+O conteúdo deste guia destina-se a instruir sobre o que fazer e o que não fazer ao criar novos produtos licenciados. Este guia também se destina a funcionar em conjunto com os guias de estilo e kits de ferramentas de ativos da Coca-Cola aos quais os licenciados têm acesso. Todos os designs estão sujeitos à aprovação final da Coca-Cola. Entre em contato conosco com quaisquer perguntas ou preocupações.
+###END -PROPÓSITO-###
+
+###BEGIN -TIPOGRAFIA-###
+A fonte oficial da Coca-Cola é a Gotham. É a fonte preferida para todo o uso. A família de fontes Gotham pode ser comprada em typography.com.
+
+Fontes adicionais estão disponíveis em áreas onde os conjuntos de caracteres locais proíbem o uso da Gotham.
+
+Gotham Book Regular
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+Gotham Medium Regular
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+Gotham Bold Regular
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+Gotham Book Italic
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+Gotham Medium Italic
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+Gotham Bold Italic
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+###END -TIPOGRAFIA-###
+
+###BEGIN -CORES PADRÃO-###
+Os produtos devem ter a cor correspondente ao Vermelho Coke na construção CMYK, quando possível. Amostras de cores estão disponíveis mediante solicitação.
+
+Quando a correspondência exata de cores não for possível, Pantone 186 C é a cor spot mais próxima.
+
+Coke Red
+Pantone: N/A
+CMYK: 4/100/95/0
+RGB: 244/0/9
+LAB: 44.38/70.45/53.07
+
+Black
+Pantone: Black C
+CMYK: 0/0/0/100
+RGB: 0/0/0
+
+Grey
+Pantone: Cool Grey 5 C
+CMYK: 31/24/25/0
+RGB: 179/179/179
+
+Silver
+Pantone: 877
+RGB: 168/183/191
+
+White
+Pantone: N/A
+CMYK: 4/100/95/0
+RGB: 244/0/9
+
+Pantone 186 C
+###END -CORES PADRÃO-###
+
+###BEGIN -ÍCONES DA MARCA-###
+É sempre preferível que os ícones da Coca-Cola sejam mostrados em sua totalidade. Um COCA-COLA impecável deve sempre aparecer em algum lugar no produto ou na embalagem. Onde COCA-COLA é cortado, é preferível que COCA seja visível.
+
+Spencerian Script
+Coke Script
+Dynamic Ribbon Device (DRD)
+Red Disc
+Arden Square
+Contour Bottle ###END -ÍCONES DA MARCA-###
+###BEGIN -SOMBRAS E CONTORNOS NOS ELEMENTOS PRINCIPAIS DA MARCA-###
+Sombras e contornos não são permitidos em nenhum dos ícones principais da marca. Como regra geral, sombras devem ser evitadas.
+
+NOTA: O disco 3D não é considerado como tendo uma sombra e seu uso é aprovado.
+###END -SOMBRAS E CONTORNOS NOS ELEMENTOS PRINCIPAIS DA MARCA-###
+
+###BEGIN -A ESCRITA SPENCERIANA-###
+Esta seção ilustrará as formas apropriadas de representar e utilizar a Escrita Spenceriana. Distinta, elegante e dinâmica, a Escrita Spenceriana tem sido o elemento mais consistentemente usado da nossa Identidade de Marca desde sua criação em 1886 pelo primeiro contador da Companhia.
+###END -A ESCRITA SPENCERIANA-###
+
+###BEGIN -ESCRITA SPENCERIANA & VARIANTES-###
+Ao usar logotipos antigos com a marca registrada na cauda do C, a "marca registrada" deve ser legível. Se não for, um ® deve ser adicionado.
+###END -ESCRITA SPENCERIANA & VARIANTES-###
+
+###BEGIN -LINHA CENTRAL-###
+A linha central é o centro visualmente correto da Escrita Spenceriana. O centro visual pode ser encontrado determinando o ponto médio entre a borda mais externa do primeiro C e a borda mais externa do último A.
+###END -LINHA CENTRAL-###
+
+###BEGIN -ORIENTAÇÃO-###
+A orientação padrão da Escrita Spenceriana deve ser ascendente, não descendente. Exceções podem ser concedidas caso a caso.
+###END -ORIENTAÇÃO-###
+
+###BEGIN -JUNÇÃO DE INTERSECÇÃO SCRIPT/DRD-###
+Ao usar este ativo específico dos anos 1980 do Red, White and Heritage Toolkit, o DRD deve estar presente. O Script não é aprovado para uso por si só.
+
+Como mostrado à direita, quando a Fita Dinâmica passa pelo Script, o laço traseiro do L em Cola é removido.
+###END -JUNÇÃO DE INTERSECÇÃO SCRIPT/DRD-###
+
+###BEGIN -DIVIDINDO O SCRIPT-###
+Ao dividir o script sobre um zíper ou botões, os scripts devem manter o espaçamento correto, incluindo o hífen.
+###END -DIVIDINDO O SCRIPT-###
+
+###BEGIN -CORTE-###
+O corte do script da Coca-Cola é permitido, mas requer pré-aprovação e revisão caso a caso.
+###END -CORTE-###
+
+###BEGIN -DISTORÇÃO-###
+Não distorça ou desfoque o Script. A única exceção é o Script 3D permitido para a Garrafa Contour.
+###END -DISTORÇÃO-###
+
+###BEGIN -USO COM MARCAS NÃO PADRÃO DA MARCA-###
+Quando uma Escrita Spenceriana completa não está visível em um item, uma escrita impecável deve estar presente na etiqueta interna do pescoço/etiqueta costurada.
+###END -USO COM MARCAS NÃO PADRÃO DA MARCA-###
+
+###BEGIN -LOGOTIPOS INTERNACIONAIS-###
+Use o logotipo internacional correto da Coca-Cola para cada país. Apenas logotipos internacionais aprovados mostrados no Brand Comply serão permitidos. INCLUA a Escrita Spenceriana em qualquer design na etiqueta do pescoço ou de tecido.
+###END -LOGOTIPOS INTERNACIONAIS-###
+
+###BEGIN -COMBINANDO LOGOTIPOS INTERNACIONAIS-###
+Logotipos internacionais podem ser usados sozinhos. Ao combinar logotipos internacionais, use 3 ou mais. Assegure-se de que uma Escrita Spenceriana impecável com as marcas de registro adequadas esteja presente na etiqueta interna do pescoço/etiqueta costurada. Uma escrita impecável deve sempre ser incluída em algum lugar do item. Pode estar presente em uma etiqueta no pescoço, etiqueta pendurada, na parte inferior, etc.
+###END -COMBINANDO LOGOTIPOS INTERNACIONAIS-###
+
+###BEGIN -USANDO O DYNAMIC RIBBON DEVICE (DRD)-###
+Esta seção ilustrará as formas apropriadas de representar e utilizar o Dynamic Ribbon Device (DRD). Inspirado na silhueta da Garrafa Contour, enraizado em nossa herança e conectado ao líquido que flui, o DRD encapsula a elevação otimista da Coca-Cola. É proprietário, único e atemporal.
+###END -USANDO O DYNAMIC RIBBON DEVICE (DRD)-###
+
+###BEGIN -DYNAMIC RIBBON DEVICE (DRD)-###
+Distorção e Posicionamento
+Geralmente, o DRD deve estar nivelado em sua orientação (horizontal ou vertical) e deve estar contido em um Arden Square ou ir de borda a borda/costura a costura. O DRD é uma marca registrada. Consulte a página 18 para obter informações sobre marcas registradas e linhas legais. Quando não acompanhado por um script da Coca-Cola, uma marca de registro deve estar presente.
+
+Exceções são feitas caso a caso.
+###END -DYNAMIC RIBBON DEVICE (DRD)-###
+
+###BEGIN -DIVIDINDO O DRD-###
+O DRD pode ser dividido na costura do zíper/botão, desde que o espaçamento e o dimensionamento permaneçam corretos quando o zíper ou os botões estiverem fechados. O DRD também deve ir de borda a borda.
+
+O ® só é necessário para uso quando o DRD é usado sozinho.
+###END -DIVIDINDO O DRD-###
+
+###BEGIN -RECICLADO/RPET-###
+A fonte de rPET e as usinas de reciclagem devem ser certificadas através do nosso processo de certificação administrado pela WWL. Toda a rotulagem, alegações e mensagens de "garrafas dentro" também devem ser autenticadas e verificadas para atender aos padrões aplicáveis.
+###END -RECICLADO/RPET-###
+
+###BEGIN -LINHAS LEGAIS-###
+Todo produto deve conter uma linha de direitos autorais da Coca-Cola:
+©2017 The Coca-Cola Company. Todos os direitos reservados.
+
+Embalagens e etiquetas penduradas devem conter a linha legal completa:
+COCA-COLA, COKE, o Design da Garrafa Contour e o Dynamic Ribbon Device são marcas registradas da The Coca-Cola Company.
+©2017 The Coca-Cola Company. Todos os direitos reservados.
+Distribuído por (adicione o nome do licenciado aqui).
+
+Insira marcas registradas adicionais conforme usadas: ex: o Ícone do Disco Vermelho, o Copo Contour da Coca-Cola, o Design do Papai Noel da Coca-Cola, o Design do Urso Polar da Coca-Cola, etc.
+
+PARA O CANADÁ: Você deve usar tanto a linha legal em inglês quanto a versão em francês, como escrito abaixo:
+/MD COCA-COLA, COKE, a Garrafa Contour e o Dynamic Ribbon Device são marcas registradas da The Coca-Cola Company, e no Canadá, são marcas registradas da Coca-Cola Ltée.
+©2017 The Coca-Cola Company, e no Canadá, Coca-Cola Ltée. Todos os direitos reservados. Distribuído por (nome do licenciado).
+###END -LINHAS LEGAIS-###
+
+###BEGIN -PROPRIEDADE INTELECTUAL-###
+Os licenciados são responsáveis por obter uma autorização assinada para qualquer conteúdo (modelos, fotografia, arte, música) para uso em mercadorias licenciadas em qualquer país.
+###END -PROPRIEDADE INTELECTUAL-###
+
+###BEGIN -COR-###
+Nossas cores principais da marca são vermelho, branco, prata/cinza e preto. Recomenda-se que nossas marcas registradas sejam representadas nessas cores. Tom sobre tom e metálicos são permitidos. Cores adicionais serão consideradas se fizerem parte de um design gráfico integrado ou conceito baseado em tendências.
+###END -COR-###
+
+###BEGIN -BANDEIRAS-###
+Bandeiras e elementos de bandeiras são considerados de alto risco devido à lei e uso do país. Consulte as diretrizes de bandeiras para uso específico e diretrizes por país.
+###END -BANDEIRAS-###
+
+###BEGIN -CAMUFLAGEM & ESTAMPAS DE ANIMAIS-###
+O uso de camuflagem e estampas de animais é aceitável quando usado como uma expressão de moda. Seu uso deve refletir a personalidade e tonalidade da marca.
+###END -CAMUFLAGEM & ESTAMPAS DE ANIMAIS-###
+
+###BEGIN -ÍCONES E SÍMBOLOS CULTURAIS-###
+Símbolos culturais, políticos и religiosos são considerados fora da estratégia e não devem ser usados. Ícones negativos, agressivos e controversos são considerados fora da estratégia e não devem ser usados. Todos os elementos devem apoiar os atributos da Coca-Cola de inclusão universal, felicidade e otimismo.
+###END -ÍCONES E SÍMBOLOS CULTURAIS-###
+
+###BEGIN -CONTATOS DE LICENCIAMENTO-###
+Gerentes de Negócios
+Kate Dwyer - Diretora de Grupo, Licenciamento Global
+Becky Anderson - América do Norte
+Brad Fields - América Latina & Drinkware
+Misako Kiyota - Ásia-Pacífico
+Marsha Schroeder - Europa
+
+Varejo
+Patrick Kells - Diretor, Merchandising de Varejo
+Jennifer Collins - Compradora & Desenvolvedora de Produto
+
+Marketing
+Kelly Kozel - Gerente Global de Insights, Estratégia e Marketing
+
+Alinhamento de Marca
+Shawn Hayes - Europa/Ásia-Pacífico/Drinkware Global
+Kerri Johnson - América do Norte (Linhas Duras)
+Chris Sheppard - América Latina/América do Norte (Linhas Leves)
+Maiko Kisaka - Ásia-Pacífico
+###END -CONTATOS DE LICENCIAMENTO-###
+
+###BEGIN -AGRADECIMENTO-###
+Thank You.
+
+Coke Global Licensing
+The Coca-Cola Company
+###END -AGRADECIMENTO-###
