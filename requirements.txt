@@ -10,3 +10,6 @@ numpy
 pysqlite3-binary
 langchain-huggingface
 chromadb
+cassandra-driver
+python-dotenv
+langchain-astradb
