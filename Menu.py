@@ -16,12 +16,20 @@ GEMINI_API_KEY = "AIzaSyAb_-ri-6VHMIw9da8G_bDm1TwRIEIuPaM"
 # --- Função da API Gemini para Análise (RAG) ---
 def gerar_insights_com_gemini(df_posts):
     """Usa a IA para gerar um relatório completo com base nos dados do arquivo CSV."""
+    
     try:
         genai.configure(api_key=GEMINI_API_KEY)
         model = genai.GenerativeModel('gemini-flash-latest')
-
+        # Usar 'tipo' como categoria para análise
         if 'tipo' in df_posts.columns:
+            df_analise = df_posts.rename(columns={'tipo': 'categoria'})
+        elif 'tipo' in df_posts.columns:
+            coluna_categoria = 'tipo'
             df_posts = df_posts.rename(columns={'tipo': 'categoria'})
+        else:
+            st.error("O arquivo CSV precisa ter uma coluna chamada 'categoria' ou 'tipo'.")
+            return None
+
 
         dados_posts_md = df_posts.to_markdown(index=False)
         
@@ -62,11 +70,20 @@ def chatbot_analise_instagram(df_posts, pergunta_usuario):
         genai.configure(api_key=GEMINI_API_KEY)
         model = genai.GenerativeModel('gemini-2.5-flash')
         
+                # Verificar qual coluna usar para categoria
+        if 'categoria' in df_posts.columns:
+            coluna_categoria = 'categoria'
+        elif 'tipo' in df_posts.columns:
+            coluna_categoria = 'tipo'
+            df_posts = df_posts.rename(columns={'tipo': 'categoria'})
+        else:
+            return "❌ Erro: Não foi encontrada coluna de categoria nos dados."
+            
         # Prepara resumo dos dados para contexto
         dados_resumo = {
             'total_posts': len(df_posts),
             'periodo': f"{df_posts['data'].min()} a {df_posts['data'].max()}",
-            'tipos_conteudo': df_posts['tipo'].value_counts().to_dict(),
+            'categoria_conteudo': df_posts['categoria'].value_counts().to_dict(),
             'media_curtidas': df_posts['curtidas'].mean(),
             'media_comentarios': df_posts['comentarios'].mean(),
             'top_curtidas': df_posts.nlargest(1, 'curtidas')[['data', 'curtidas', 'comentarios', 'legenda']].to_dict('records')[0] if len(df_posts) > 0 else {},
