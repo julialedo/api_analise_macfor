@@ -13,3 +13,4 @@ chromadb
 cassandra-driver
 python-dotenv
 langchain-astradb
+tabulate
