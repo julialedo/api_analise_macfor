@@ -102,7 +102,9 @@ def fetch_instagram_data(supabase_client: Client, target_username: str):
 
             'media_url': 'link',
 
-            'post_pk': 'id'
+            'post_pk': 'id',
+
+            'id' : 'postgres_id'
 
             # A coluna 'tipo' já tem o nome correto
 
@@ -215,3 +217,48 @@ def save_posts_to_supabase(supabase_client: Client, df: pd.DataFrame, target_use
     except Exception as e:
 
         print(f"❌ Erro ao salvar no Supabase: {e}")
+
+
+
+
+
+
+
+
+#ADCIONAR A LÓGICA DE ATUALIZAR A CLASSIFICAÇÃO DO POST
+
+
+def update_post_classification(supabase_client: Client, classificacoes: list):
+    """
+    Atualiza a coluna 'tipo' no Supabase com base nos resultados da classificação.
+    
+    Args:
+        supabase_client (Client): O cliente de conexão.
+        classificacoes (list): Uma lista de dicionários, ex: [{'id': '123', 'categoria': 'Institucional'}]
+    """
+    if not classificacoes:
+        print("Nenhuma classificação para atualizar.")
+        return
+
+    # 1. Traduzir os nomes das colunas para o banco de dados
+    #    'id' no seu app é 'post_pk' no banco
+    #    'categoria' no seu app é 'tipo' no banco
+    dados_para_atualizar = [
+        {'post_pk': item['id'], 'tipo': item['categoria']}
+        for item in classificacoes
+    ]
+
+    print(f"🔄 Atualizando {len(dados_para_atualizar)} registros no Supabase...")
+
+    try:
+        # 2. Usar 'upsert'. Ele vai encontrar o post pelo 'post_pk' (que é unique)
+        #    e atualizará apenas a coluna 'tipo', deixando o resto intacto.
+        response = supabase_client.table("posts").upsert(
+            dados_para_atualizar,
+            on_conflict="post_pk" 
+        ).execute()
+        
+        print("✅ Classificações salvas com sucesso no Supabase!")
+
+    except Exception as e:
+        print(f"❌ Erro ao atualizar classificações no Supabase: {e}")

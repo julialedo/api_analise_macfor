@@ -1,9 +1,10 @@
-# coletar_e_salvar.py
+# coletar_e_salvar_insta.py
 
 import pandas as pd
 from instagrapi import Client
 from instagrapi.exceptions import LoginRequired
 import os
+import sys 
 
 # --- [ETAPA 1] IMPORTAR AS FERRAMENTAS ---
 
@@ -24,14 +25,19 @@ except ImportError:
     print("="*50)
     exit() # Interrompe o script se a configuração não for encontrada
 
-# --- Configuração da Coleta ---
-USUARIO_ALVO = "somosbroto" 
+# --- Configuração da Coleta --- 
 QUANTIDADE_DE_POSTS = 20 # Quantos posts você quer buscar
 ARQUIVO_SESSAO = "sessao_instagrapi.json"
 
 
 def main():
     print("--- INICIANDO PROCESSO DE COLETA E SALVAMENTO ---")
+    if len(sys.argv) < 2:
+        print("❌ ERRO: Você esqueceu de passar o nome do usuário.")
+        print(f"Uso correto: python {sys.argv[0]} nome_do_usuario")
+        return
+    USUARIO_ALVO = sys.argv[1].replace('@', '')
+    print(f"🎯 Usuário alvo definido: @{USUARIO_ALVO}")
     
     # --- [ETAPA 2] CONECTAR AO SUPABASE ---
     print("\n[ETAPA 2/4] Conectando ao Supabase...")
