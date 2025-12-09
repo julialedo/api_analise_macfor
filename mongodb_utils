@@ -1,0 +1,137 @@
+# mongodb_utils.py
+import streamlit as st
+import pandas as pd
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
+
+# Você precisará adicionar MONGODB_URI no seu config.py
+# Ex: MONGODB_URI = "mongodb+srv://usuario:senha@cluster..."
+try:
+    from config import MONGODB_URI
+except ImportError:
+    st.error("Faltando MONGODB_URI no config.py")
+
+@st.cache_resource
+def init_connection():
+    """Inicia a conexão com o MongoDB."""
+    try:
+        client = MongoClient(MONGODB_URI)
+        # Teste rápido de conexão
+        client.admin.command('ping')
+        return client
+    except Exception as e:
+        st.error(f"Erro ao conectar no MongoDB: {e}")
+        return None
+
+def fetch_instagram_data(client, target_username: str, limit: int=0):
+    """Busca dados do MongoDB e retorna como DataFrame."""
+    db = client["agente_macfor"] # Nome do seu banco de dados
+    collection = db["posts"]     # Nome da sua coleção (antiga tabela)
+
+    print(f"🔍 Buscando dados para '{target_username}' no MongoDB...")
+
+    # Busca filtrando pelo username e excluindo o _id interno do Mongo
+    cursor = collection.find(
+        {"username": target_username},
+        {"_id": 0} # Exclui a coluna _id visualmente para não poluir o DF
+    ).sort("published_at", -1)
+
+
+    if limit > 0:
+        cursor = cursor.limit(limit)
+
+    dados = list(cursor)
+
+    if not dados:
+        st.warning(f"Nenhum dado encontrado para '{target_username}'.")
+        return None
+
+    df = pd.DataFrame(dados)
+
+    # --- TRADUÇÃO DAS COLUNAS ---
+    # Mantive a mesma lógica para seu front-end funcionar igual
+    mapeamento_colunas = {
+        'published_at': 'data',
+        'media_num': 'num',
+        'like_count': 'curtidas',
+        'comment_count': 'comentarios',
+        'caption': 'legenda',
+        'media_url': 'link',
+        'post_pk': 'id' 
+        # Nota: 'postgres_id' não existe no Mongo, removemos.
+    }
+    
+    # Renomeia apenas as colunas que existem no DF
+    cols_to_rename = {k: v for k, v in mapeamento_colunas.items() if k in df.columns}
+    df_traduzido = df.rename(columns=cols_to_rename)
+
+    print(f"✅ {len(df_traduzido)} registros encontrados.")
+    return df_traduzido
+
+def save_posts_to_mongodb(client, df: pd.DataFrame, target_username: str):
+    """
+    Salva posts no MongoDB (Upsert).
+    Mantive o nome da função 'save_posts_to_supabase' para não quebrar seu script principal,
+    mas internamente ela salva no MongoDB.
+    """
+    if df.empty:
+        return
+
+    db = client["agente_macfor"]
+    collection = db["posts"]
+
+    df['username'] = target_username
+
+    # Mapeamento inverso (do seu script para o banco)
+    mapeamento_colunas = {
+        'data': 'published_at',
+        'num': 'media_num',
+        'curtidas': 'like_count',
+        'comentarios': 'comment_count',
+        'legenda': 'caption',
+        'link': 'media_url',
+        'id': 'post_pk',
+    }
+    df_renomeado = df.rename(columns=mapeamento_colunas)
+    
+    # Se a coluna 'tipo' não existir, cria como None
+    if 'tipo' not in df_renomeado.columns:
+        df_renomeado['tipo'] = None
+
+    dados_para_salvar = df_renomeado.to_dict(orient='records')
+
+    print(f"📦 Processando {len(dados_para_salvar)} registros para o MongoDB...")
+
+    # Lógica de UPSERT (Atualizar se existe, Criar se não existe)
+    count_upsert = 0
+    for post in dados_para_salvar:
+        try:
+            # Procura pelo ID único do post (post_pk)
+            filtro = {"post_pk": post["post_pk"]}
+            
+            # $set atualiza os campos. upsert=True cria se não achar.
+            collection.update_one(filtro, {"$set": post}, upsert=True)
+            count_upsert += 1
+        except Exception as e:
+            print(f"Erro ao salvar post {post.get('post_pk')}: {e}")
+
+    print(f"✅ {count_upsert} posts sincronizados no MongoDB!")
+
+def update_post_classification(client, classificacoes: list):
+    """Atualiza a categoria (tipo) dos posts no MongoDB."""
+    if not classificacoes:
+        return
+
+    db = client["agente_macfor"]
+    collection = db["posts"]
+
+    print(f"🔄 Atualizando {len(classificacoes)} classificações...")
+
+    for item in classificacoes:
+        # item['id'] vem do seu app, que corresponde ao 'post_pk' no banco
+        filtro = {"post_pk": item['id']}
+        novos_dados = {"$set": {"tipo": item['categoria']}}
+        
+        collection.update_one(filtro, novos_dados)
+
+    print("✅ Classificações atualizadas no MongoDB!")
