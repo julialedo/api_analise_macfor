@@ -5,14 +5,10 @@ import google.generativeai as genai
 import time
 
 def classificar_posts_gemini(df_posts_para_classificar, api_key):
-    """
-    Classifica um DataFrame de posts usando a API Gemini.
-    Esta é a versão "limpa", sem NENHUM código do Streamlit.
-    """
     try:
         genai.configure(api_key=api_key)
         # Recomendo usar o modelo mais recente
-        model = genai.GenerativeModel('gemini-2.5-flash') 
+        model = genai.GenerativeModel('gemini-2.0-flash') 
         
         # O DataFrame já vem filtrado, pegamos as colunas 'id' e 'legenda'
         # que a função fetch_instagram_data nos deu.
@@ -67,9 +63,11 @@ def classificar_posts_gemini(df_posts_para_classificar, api_key):
                 
                 # Pausa de 1 segundo para não sobrecarregar a API
                 time.sleep(1) 
+                print("REQUISIÇÃO DA CLASSIFICAÇÃO")
                 
             except Exception as e:
                 print(f"    Erro ao classificar post ID {row['id']}: {str(e)[:100]}...")
+                print("REQUISIÇÃO QUE TEVE ERRO")
                 resultados.append({'id': row['id'], 'categoria': 'Erro na Classificação'})
         
         print("Classificação concluída.")
