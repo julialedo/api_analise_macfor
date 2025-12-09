@@ -20,7 +20,7 @@ except ImportError:
     try:
         from config import SEU_NOME_DE_USUARIO, SUA_SENHA
     except ImportError:
-        print("ERRO CRÍTICO: Não foi possível encontrar as credenciais do Instagram (SEU_NOME_DE_USUARIO, SUA_SENHA) no arquivo de configuração.")
+        print("ERRO CRÍTICO: Não foi possível encontrar as credenciais do Instagram (SEU_NOME_DE_USUARIO, SUA_SENHA) no arquivo de configuração.
         # Define valores padrão para evitar que o import falhe no Streamlit
         SEU_NOME_DE_USUARIO = "placeholder_user"
         SUA_SENHA = "placeholder_password"
